@@ -1,0 +1,1047 @@
+(require (lib "graphics.ss" "graphics"))
+
+(open-graphics)
+
+(define ventana (open-viewport "ventana" 1366 600))
+(define ventana2 (open-pixmap "ventana2" 1366 600))
+
+
+(define (dino0 x y);98 x 90
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 40) y) 35 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 4)) 45 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 8)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 49) (+ y 8)) 31 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 12)) 45 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 20)) 25 8 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 28)) 40 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 32)) 25 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 27) (+ y 36)) 29 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 23) (+ y 40)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 19) (+ y 44)) 47 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 62) (+ y 44)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 15) (+ y 48)) 41 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 52)) 66 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 32)) 4 30 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 43)) 4 18 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 47)) 4 7 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 62)) 57 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 66)) 49 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 2) (+ y 70)) 42 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 6) (+ y 74)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 4 20 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 14 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 82)) 8 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 94)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 78)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 84)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 78)) 8 4 "black")
+  )
+
+(define (dino1 x y);98 x 90
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 40) y) 35 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 4)) 45 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 8)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 49) (+ y 8)) 31 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 12)) 45 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 20)) 25 8 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 28)) 40 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 32)) 25 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 27) (+ y 36)) 29 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 23) (+ y 40)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 19) (+ y 44)) 47 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 62) (+ y 44)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 15) (+ y 48)) 41 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 52)) 66 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 32)) 4 30 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 43)) 4 18 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 47)) 4 7 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 62)) 57 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 66)) 49 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 2) (+ y 70)) 42 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 6) (+ y 74)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 14 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 82)) 8 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 84)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 78)) 4 20 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 94)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 78)) 8 4 "black")
+  )
+
+(define (dino x y);98 x 90
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 40) y) 35 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 4)) 45 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 8)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 49) (+ y 8)) 31 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 12)) 45 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 20)) 25 8 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 28)) 40 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 32)) 25 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 27) (+ y 36)) 29 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 23) (+ y 40)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 19) (+ y 44)) 47 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 62) (+ y 44)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 15) (+ y 48)) 41 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 52)) 66 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 32)) 4 30 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 43)) 4 18 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 47)) 4 7 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 62)) 57 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 66)) 49 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 2) (+ y 70)) 42 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 6) (+ y 74)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 4 20 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 14 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 82)) 8 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 94)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 78)) 4 20 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 94)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 78)) 8 4 "black")
+  )
+
+
+(define (dino2 x y);98 x 90
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 40) y) 35 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 4)) 45 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 8)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 49) (+ y 8)) 31 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 12)) 45 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 20)) 25 8 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 28)) 40 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 32)) 25 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 27) (+ y 36)) 29 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 23) (+ y 40)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 19) (+ y 44)) 47 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 62) (+ y 44)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 15) (+ y 48)) 41 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 52)) 66 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 10) (+ y 32)) 4 30 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 43)) 4 18 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 47)) 4 7 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 6) (+ y 62)) 57 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 2) (+ y 66)) 49 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 2) (+ y 70)) 42 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 6) (+ y 74)) 33 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 78)) 14 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 82)) 8 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 84)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 78)) 4 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 35) (+ y 84)) 10 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 31) (+ y 78)) 8 4 "black")
+  )
+
+
+(define (cactus x y);90 x 40
+  ((draw-solid-rectangle ventana2)(make-posn x y) 10 90 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 1) (- y 1)) 8 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 2) (- y 2)) 6 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 15) (+ y 40)) 15 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 15) (+ y 15)) 8 25 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 14) (+ y 44)) 14 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 13) (+ y 45)) 13 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 15) (+ y 40)) 15 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 14) (+ y 14)) 6 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (- x 13) (+ y 13)) 4 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 50)) 15 4 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 17) (+ y 25)) 8 25 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 54)) 14 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 10) (+ y 55)) 13 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 18) (+ y 24)) 6 1 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 19) (+ y 23)) 4 1 "black")
+  )
+
+
+(define (espinas x y)
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 220) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 230) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 240) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 260) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 270) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 280) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 290) (+ y 90))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 230) (+ y 80))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 240) (+ y 80))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 80))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 260) (+ y 80))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 270) (+ y 80))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 280) (+ y 80))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 240) (+ y 70))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 70))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 260) (+ y 70))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 270) (+ y 70))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 60))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 260) (+ y 60))10 10 "orange")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 320) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 330) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 340) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 360) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 370) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 380) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 390) (+ y 90))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 330) (+ y 80))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 340) (+ y 80))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 80))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 360) (+ y 80))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 370) (+ y 80))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 380) (+ y 80))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 340) (+ y 70))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 70))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 360) (+ y 70))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 370) (+ y 70))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 60))10 10 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 360) (+ y 60))10 10 "black")
+  )
+
+(define (lava x y)
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 230) (+ y 200))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 220))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 270) (+ y 240))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 230) (+ y 220))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 240))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 290) (+ y 240))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 310) (+ y 240))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 330) (+ y 240))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 220))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 370) (+ y 220))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 370) (+ y 200))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 240))20 20 "brown")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 250) (+ y 200))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 270) (+ y 200))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 290) (+ y 200))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 310) (+ y 200))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 330) (+ y 200))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 350) (+ y 200))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 270) (+ y 220))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 290) (+ y 220))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 310) (+ y 220))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 320) (+ y 220))20 20 "red")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 330) (+ y 220))20 20 "red")
+)
+(define (chuzos x y)
+  ((draw-line ventana2)(make-posn (+ x 700) (+ y 215))(make-posn (+ x 730) (+ y 215))"black")
+  ((draw-line ventana2)(make-posn (+ x 730) (+ y 215))(make-posn (+ x 715) (+ y 190))"black")
+  ((draw-line ventana2)(make-posn (+ x 700) (+ y 215))(make-posn (+ x 715) (+ y 190))"black")
+  ((draw-line ventana2)(make-posn (+ x 730) (+ y 215))(make-posn (+ x 760) (+ y 215))"black")
+  ((draw-line ventana2)(make-posn (+ x 760) (+ y 215))(make-posn (+ x 745) (+ y 190))"black")
+  ((draw-line ventana2)(make-posn (+ x 730) (+ y 215))(make-posn (+ x 745) (+ y 190))"black")
+  ((draw-line ventana2)(make-posn (+ x 760) (+ y 215))(make-posn (+ x 790) (+ y 215))"black")
+  ((draw-line ventana2)(make-posn (+ x 790) (+ y 215))(make-posn (+ x 775) (+ y 190))"black")
+  ((draw-line ventana2)(make-posn (+ x 760) (+ y 215))(make-posn (+ x 775) (+ y 190))"black")
+  ((draw-line ventana2)(make-posn (+ x 700) (+ y 214))(make-posn (+ x 730) (+ y 214))"black")
+  ((draw-line ventana2)(make-posn (+ x 700) (+ y 213))(make-posn (+ x 730) (+ y 213))"black")
+  ((draw-line ventana2)(make-posn (+ x 700) (+ y 212))(make-posn (+ x 730) (+ y 212))"black")
+  ((draw-line ventana2)(make-posn (+ x 700) (+ y 211))(make-posn (+ x 730) (+ y 211))"black")
+  ((draw-line ventana2)(make-posn (+ x 702) (+ y 210))(make-posn (+ x 728) (+ y 210))"black")
+  ((draw-line ventana2)(make-posn (+ x 703) (+ y 209))(make-posn (+ x 727) (+ y 209))"black")
+  ((draw-line ventana2)(make-posn (+ x 704) (+ y 208))(make-posn (+ x 726) (+ y 208))"black")
+  ((draw-line ventana2)(make-posn (+ x 705) (+ y 207))(make-posn (+ x 725) (+ y 207))"black")
+  ((draw-line ventana2)(make-posn (+ x 705) (+ y 206))(make-posn (+ x 724) (+ y 206))"black")
+  ((draw-line ventana2)(make-posn (+ x 707) (+ y 205))(make-posn (+ x 723) (+ y 205))"black")
+  ((draw-line ventana2)(make-posn (+ x 708) (+ y 204))(make-posn (+ x 722) (+ y 204))"black")
+  ((draw-line ventana2)(make-posn (+ x 708) (+ y 203))(make-posn (+ x 722) (+ y 203))"black")
+  ((draw-line ventana2)(make-posn (+ x 708) (+ y 202))(make-posn (+ x 722) (+ y 202))"black")
+  ((draw-line ventana2)(make-posn (+ x 709) (+ y 201))(make-posn (+ x 722) (+ y 201))"black")
+  ((draw-line ventana2)(make-posn (+ x 710) (+ y 200))(make-posn (+ x 722) (+ y 200))"black")
+  ((draw-line ventana2)(make-posn (+ x 711) (+ y 199))(make-posn (+ x 721) (+ y 199))"black")
+  ((draw-line ventana2)(make-posn (+ x 711) (+ y 198))(make-posn (+ x 720) (+ y 198))"black")
+  ((draw-line ventana2)(make-posn (+ x 712) (+ y 197))(make-posn (+ x 719) (+ y 197))"black")
+  ((draw-line ventana2)(make-posn (+ x 712) (+ y 196))(make-posn (+ x 718) (+ y 196))"black")
+  ((draw-line ventana2)(make-posn (+ x 713) (+ y 195))(make-posn (+ x 717) (+ y 195))"black")
+  ((draw-line ventana2)(make-posn (+ x 713) (+ y 194))(make-posn (+ x 716) (+ y 194))"black")
+  ((draw-line ventana2)(make-posn (+ x 714) (+ y 193))(make-posn (+ x 715) (+ y 193))"black")
+  ((draw-line ventana2)(make-posn (+ x 714) (+ y 192))(make-posn (+ x 714) (+ y 192))"black")
+  ((draw-line ventana2)(make-posn (+ x 730) (+ y 214))(make-posn (+ x 760) (+ y 214))"black")
+  ((draw-line ventana2)(make-posn (+ x 731) (+ y 213))(make-posn (+ x 759) (+ y 213))"black")
+  ((draw-line ventana2)(make-posn (+ x 732) (+ y 212))(make-posn (+ x 758) (+ y 212))"black")
+  ((draw-line ventana2)(make-posn (+ x 733) (+ y 211))(make-posn (+ x 757) (+ y 211))"black")
+  ((draw-line ventana2)(make-posn (+ x 734) (+ y 210))(make-posn (+ x 756) (+ y 210))"black")
+  ((draw-line ventana2)(make-posn (+ x 735) (+ y 209))(make-posn (+ x 755) (+ y 209))"black")
+  ((draw-line ventana2)(make-posn (+ x 735) (+ y 208))(make-posn (+ x 755) (+ y 208))"black")
+  ((draw-line ventana2)(make-posn (+ x 736) (+ y 207))(make-posn (+ x 754) (+ y 207))"black")
+  ((draw-line ventana2)(make-posn (+ x 736) (+ y 206))(make-posn (+ x 754) (+ y 206))"black")
+  ((draw-line ventana2)(make-posn (+ x 737) (+ y 205))(make-posn (+ x 753) (+ y 205))"black")
+  ((draw-line ventana2)(make-posn (+ x 737) (+ y 204))(make-posn (+ x 753) (+ y 204))"black")
+  ((draw-line ventana2)(make-posn (+ x 738) (+ y 203))(make-posn (+ x 752) (+ y 203))"black")
+  ((draw-line ventana2)(make-posn (+ x 739) (+ y 202))(make-posn (+ x 751) (+ y 202))"black")
+  ((draw-line ventana2)(make-posn (+ x 740) (+ y 201))(make-posn (+ x 751) (+ y 201))"black")
+  ((draw-line ventana2)(make-posn (+ x 740) (+ y 200))(make-posn (+ x 751) (+ y 200))"black")
+  ((draw-line ventana2)(make-posn (+ x 741) (+ y 199))(make-posn (+ x 750) (+ y 199))"black")
+  ((draw-line ventana2)(make-posn (+ x 741) (+ y 198))(make-posn (+ x 750) (+ y 198))"black")
+  ((draw-line ventana2)(make-posn (+ x 742) (+ y 197))(make-posn (+ x 749) (+ y 197))"black")
+  ((draw-line ventana2)(make-posn (+ x 742) (+ y 196))(make-posn (+ x 749) (+ y 196))"black")
+  ((draw-line ventana2)(make-posn (+ x 743) (+ y 195))(make-posn (+ x 748) (+ y 195))"black")
+  ((draw-line ventana2)(make-posn (+ x 743) (+ y 194))(make-posn (+ x 748) (+ y 194))"black")
+  ((draw-line ventana2)(make-posn (+ x 744) (+ y 193))(make-posn (+ x 747) (+ y 193))"black")
+  ((draw-line ventana2)(make-posn (+ x 745) (+ y 192))(make-posn (+ x 746) (+ y 192))"black")
+  ((draw-line ventana2)(make-posn (+ x 760) (+ y 214))(make-posn (+ x 790) (+ y 214))"black")
+  ((draw-line ventana2)(make-posn (+ x 761) (+ y 213))(make-posn (+ x 790) (+ y 213))"black")
+  ((draw-line ventana2)(make-posn (+ x 762) (+ y 212))(make-posn (+ x 789) (+ y 212))"black")
+  ((draw-line ventana2)(make-posn (+ x 763) (+ y 211))(make-posn (+ x 788) (+ y 211))"black")
+  ((draw-line ventana2)(make-posn (+ x 764) (+ y 210))(make-posn (+ x 787) (+ y 210))"black")
+  ((draw-line ventana2)(make-posn (+ x 765) (+ y 209))(make-posn (+ x 786) (+ y 209))"black")
+  ((draw-line ventana2)(make-posn (+ x 765) (+ y 208))(make-posn (+ x 785) (+ y 208))"black")
+  ((draw-line ventana2)(make-posn (+ x 766) (+ y 207))(make-posn (+ x 784) (+ y 207))"black")
+  ((draw-line ventana2)(make-posn (+ x 766) (+ y 206))(make-posn (+ x 784) (+ y 206))"black")
+  ((draw-line ventana2)(make-posn (+ x 767) (+ y 205))(make-posn (+ x 783) (+ y 205))"black")
+  ((draw-line ventana2)(make-posn (+ x 768) (+ y 204))(make-posn (+ x 782) (+ y 204))"black")
+  ((draw-line ventana2)(make-posn (+ x 768) (+ y 203))(make-posn (+ x 782) (+ y 203))"black")
+  ((draw-line ventana2)(make-posn (+ x 769) (+ y 202))(make-posn (+ x 781) (+ y 202))"black")
+  ((draw-line ventana2)(make-posn (+ x 770) (+ y 201))(make-posn (+ x 780) (+ y 201))"black")
+  ((draw-line ventana2)(make-posn (+ x 770) (+ y 200))(make-posn (+ x 780) (+ y 200))"black")
+  ((draw-line ventana2)(make-posn (+ x 771) (+ y 199))(make-posn (+ x 779) (+ y 199))"black")
+  ((draw-line ventana2)(make-posn (+ x 771) (+ y 198))(make-posn (+ x 779) (+ y 198))"black")
+  ((draw-line ventana2)(make-posn (+ x 772) (+ y 197))(make-posn (+ x 778) (+ y 197))"black")
+  ((draw-line ventana2)(make-posn (+ x 772) (+ y 196))(make-posn (+ x 778) (+ y 196))"black")
+  ((draw-line ventana2)(make-posn (+ x 773) (+ y 195))(make-posn (+ x 777) (+ y 195))"black")
+  ((draw-line ventana2)(make-posn (+ x 773) (+ y 194))(make-posn (+ x 777) (+ y 194))"black")
+  ((draw-line ventana2)(make-posn (+ x 774) (+ y 193))(make-posn (+ x 776) (+ y 193))"black")
+  ((draw-pixel ventana2)(make-posn 710 180)"black")
+  )
+
+(define (mounstruos x y)
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 200) (+ y 110))50 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 195) (+ y 105))60 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 190) (+ y 100))70 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 190) (+ y 95))70 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 185) (+ y 90))80 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 190) (+ y 85))70 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 190) (+ y 80))70 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 195) (+ y 75))60 5 "black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 200) (+ y 70))50 5 "black")
+  ((draw-line ventana2)(make-posn (+ x 205)(+ y 71))(make-posn (+ x 215)(+ y 50))"black")
+  ((draw-line ventana2)(make-posn (+ x 225)(+ y 71))(make-posn (+ x 215)(+ y 50))"black")
+  ((draw-line ventana2)(make-posn (+ x 226)(+ y 71))(make-posn (+ x 236)(+ y 50))"black")
+  ((draw-line ventana2)(make-posn (+ x 246)(+ y 71))(make-posn (+ x 236)(+ y 50))"black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 207) (+ y 65))17 5 "black")
+  ((draw-line ventana2)(make-posn (+ x 207)(+ y 64))(make-posn (+ x 222)(+ y 64))"black")
+  ((draw-line ventana2)(make-posn (+ x 208)(+ y 63))(make-posn (+ x 221)(+ y 63))"black")
+  ((draw-line ventana2)(make-posn (+ x 209)(+ y 62))(make-posn (+ x 220)(+ y 62))"black")
+  ((draw-line ventana2)(make-posn (+ x 210)(+ y 61))(make-posn (+ x 219)(+ y 61))"black")
+  ((draw-line ventana2)(make-posn (+ x 211)(+ y 60))(make-posn (+ x 219)(+ y 60))"black")
+  ((draw-line ventana2)(make-posn (+ x 212)(+ y 59))(make-posn (+ x 218)(+ y 59))"black")
+  ((draw-line ventana2)(make-posn (+ x 212)(+ y 58))(make-posn (+ x 218)(+ y 58))"black")
+  ((draw-line ventana2)(make-posn (+ x 213)(+ y 57))(make-posn (+ x 217)(+ y 57))"black")
+  ((draw-line ventana2)(make-posn (+ x 213)(+ y 56))(make-posn (+ x 217)(+ y 56))"black")
+  ((draw-line ventana2)(make-posn (+ x 214)(+ y 55))(make-posn (+ x 216)(+ y 55))"black")
+  ((draw-line ventana2)(make-posn (+ x 214)(+ y 55))(make-posn (+ x 216)(+ y 54))"black")
+  ((draw-line ventana2)(make-posn (+ x 214)(+ y 55))(make-posn (+ x 215)(+ y 53))"black")
+  ((draw-line ventana2)(make-posn (+ x 215)(+ y 55))(make-posn (+ x 215)(+ y 52))"black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 228)(+ y 65))17 5"black")
+  ((draw-line ventana2)(make-posn (+ x 229)(+ y 64))(make-posn (+ x 243)(+ y 64))"black")
+  ((draw-line ventana2)(make-posn (+ x 230)(+ y 63))(make-posn (+ x 242)(+ y 63))"black")
+  ((draw-line ventana2)(make-posn (+ x 231)(+ y 62))(make-posn (+ x 241)(+ y 62))"black")
+  ((draw-line ventana2)(make-posn (+ x 232)(+ y 61))(make-posn (+ x 240)(+ y 61))"black")
+  ((draw-line ventana2)(make-posn (+ x 232)(+ y 60))(make-posn (+ x 240)(+ y 60))"black")
+  ((draw-line ventana2)(make-posn (+ x 233)(+ y 59))(make-posn (+ x 239)(+ y 59))"black")
+  ((draw-line ventana2)(make-posn (+ x 233)(+ y 58))(make-posn (+ x 239)(+ y 58))"black")
+  ((draw-line ventana2)(make-posn (+ x 234)(+ y 57))(make-posn (+ x 238)(+ y 57))"black")
+  ((draw-line ventana2)(make-posn (+ x 234)(+ y 56))(make-posn (+ x 238)(+ y 56))"black")
+  ((draw-line ventana2)(make-posn (+ x 235)(+ y 55))(make-posn (+ x 237)(+ y 55))"black")
+  ((draw-line ventana2)(make-posn (+ x 235)(+ y 54))(make-posn (+ x 237)(+ y 54))"black")
+  ((draw-line ventana2)(make-posn (+ x 236)(+ y 62))(make-posn (+ x 236)(+ y 53))"black")
+  ((draw-line ventana2)(make-posn (+ x 236)(+ y 62))(make-posn (+ x 236)(+ y 52))"black")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 210) (+ y 78))10 8 "white")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 212) (+ y 79))5 5 "purple")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 230) (+ y 78))10 8 "white")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 232) (+ y 79))5 5 "purple")
+  ((draw-solid-rectangle ventana2)(make-posn (+ x 208)(+ y 95))35 5 "purple")
+  )
+
+
+(define (cactuss)
+  (cactus 400 215)
+  (cactus 700 215)
+  (cactus 1000 215)
+  )
+
+(define (cactuss1)
+  (cactus 300 215)
+  (espinas 290 215)
+  (espinas 550 215)
+  (cactus 1100 215)
+  )
+
+(define (cactuss2)
+  (espinas 100 215)
+  (cactus 600 215)
+  (espinas 900 215)
+  )
+
+(define (chusoss1)
+  (chuzos 200 100)
+  (lava 210 100)
+  (chuzos 700 100)
+  )
+
+(define (chusoss2)
+  (chuzos 300 100)
+  (lava 510 100)
+  (lava 700 100)
+  (chuzos 900 100)
+  )
+
+(define (chusoss3)
+  (chuzos 300 100)
+  (lava 510 100)
+  (chuzos 700 100)
+  (lava 110 100)
+  )
+
+(define (mounstruoss)
+  (mounstruos 100 200)
+  (mounstruos 300 50)
+  (mounstruos 500 200)
+  (mounstruos 700 50)
+  (mounstruos 900 200)
+  (mounstruos 1100 50)
+  (mounstruos 1300 200)
+  )
+  
+;pantalla 1 nivel 1
+
+
+(define (dinosaurio_Grr x y)
+  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+  (dino0 x y)
+  (cactuss)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2 x y)
+  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (cactuss)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (cactuss)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir (+ x 10) (- y 10))))
+    (else (bajar x y))))
+
+(define (bajar x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (cactuss)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (cactuss)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi x y c key)
+  (cond
+    ((>= x 1300) (movi_p2 100 200 0 (key-value (get-key-press ventana))))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr x y)
+                                                (movi (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2 x y)
+                                                     (movi (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr x y)
+                                                 (movi (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2 x y)
+                                                      (movi (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir x y)
+                        (movi (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+;pantalla 2 nivel 1
+
+(define (dinosaurio_Grr_p2 x y)
+  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+  (dino0 x y)
+  (cactuss1)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2_p2 x y)
+  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (cactuss1)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir_p2 x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (cactuss1)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir_p2 (+ x 10) (- y 10))))
+    (else (bajar_p2 x y))))
+
+(define (bajar_p2 x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (cactuss1)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar_p2 (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (cactuss1)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi_p2 x y c key)
+  (cond
+    ((>= x 1300) (movi_p3 100 200 0 (key-value (get-key-press ventana))))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr_p2 x y)
+                                                (movi_p2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2_p2 x y)
+                                                     (movi_p2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr_p2 x y)
+                                                 (movi_p2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2_p2 x y)
+                                                      (movi_p2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir_p2 x y)
+                        (movi_p2 (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi_p2 x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+
+;pantalla 3 nivel 1
+
+  (define (dinosaurio_Grr_p3 x y)
+  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+  (dino0 x y)
+  (cactuss2)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2_p3 x y)
+  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (cactuss2)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir_p3 x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (cactuss2)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir_p3 (+ x 10) (- y 10))))
+    (else (bajar_p3 x y))))
+
+(define (bajar_p3 x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (cactuss2)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar_p3 (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (cactuss2)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi_p3 x y c key)
+  (cond
+    ((>= x 1300) (cargando2))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr_p3 x y)
+                                                (movi_p3 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2_p3 x y)
+                                                     (movi_p3 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr_p3 x y)
+                                                 (movi_p3 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2_p3 x y)
+                                                      (movi_p3 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir_p3 x y)
+                        (movi_p3 (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi_p3 x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+(define (carga1 x)
+  (cond
+    ((<= x 966) (begin
+                   ((draw-solid-rectangle ventana) (make-posn 200 400) x 15 "blue")
+                   (sleep 0.01)
+                   (carga1 (+ x 2))))
+    (else (begin
+            ((clear-viewport ventana))
+            ((draw-pixmap ventana2)"mundo 1.JPG"(make-posn 0 -20)"blue")
+            (cactuss)
+            (dino 100 200)
+            (copy-viewport ventana2 ventana)
+            (movi 100 200 0 (key-value (get-key-press ventana)))
+            )
+          )
+    )
+  )
+
+(define (cargando2)
+  (begin
+    ((clear-viewport ventana2))
+    ((draw-pixmap ventana) "dinosaurio.bmp" (make-posn 0 0) "blue")
+    (copy-viewport ventana2 ventana)
+    (carga2 0)
+    )
+  )
+
+(define (carga2 x)
+  (cond
+    ((<= x 966) (begin
+                   ((draw-solid-rectangle ventana) (make-posn 200 400) x 15 "blue")
+                   (sleep 0.01)
+                   (carga2 (+ x 2))))
+    (else (begin
+            ((clear-viewport ventana))
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (chusoss1)
+            (dino 100 200)
+            (copy-viewport ventana2 ventana)
+            (movi_p1-2 100 200 0 (key-value (get-key-press ventana)))
+            )
+          )
+    )
+  )
+                              
+;pantalla 1 nivel 2
+
+(define (dinosaurio_Grr_p1-2 x y)
+  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 0)"blue")
+  (dino0 x y)
+  (chusoss1)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2_p1-2 x y)
+  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (chusoss1)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir_p1-2 x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (chusoss1)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir_p1-2 (+ x 10) (- y 10))))
+    (else (bajar_p1-2 x y))))
+
+(define (bajar_p1-2 x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (chusoss1)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar_p1-2 (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (chusoss1)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi_p1-2 x y c key)
+  (cond
+    ((>= x 1300) (movi_p2-2 100 200 0 (key-value (get-key-press ventana))))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr_p1-2 x y)
+                                                (movi_p1-2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2_p1-2 x y)
+                                                     (movi_p1-2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr_p1-2 x y)
+                                                 (movi_p1-2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2_p1-2 x y)
+                                                      (movi_p1-2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir_p1-2 x y)
+                        (movi_p1-2 (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi_p1-2 x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+;pantalla 2 nivel 2
+
+(define (dinosaurio_Grr_p2-2 x y)
+  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+  (dino0 x y)
+  (chusoss2)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2_p2-2 x y)
+  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (chusoss2)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir_p2-2 x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (chusoss2)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir_p2-2 (+ x 10) (- y 10))))
+    (else (bajar_p2-2 x y))))
+
+(define (bajar_p2-2 x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (chusoss2)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar_p2-2 (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (chusoss2)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi_p2-2 x y c key)
+  (cond
+    ((>= x 1300) (movi_p3-2 100 200 0 (key-value (get-key-press ventana))))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr_p2-2 x y)
+                                                (movi_p2-2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2_p2-2 x y)
+                                                     (movi_p2-2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr_p2-2 x y)
+                                                 (movi_p2-2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2_p2-2 x y)
+                                                      (movi_p2-2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir_p2-2 x y)
+                        (movi_p2-2 (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi_p2-2 x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+;pantalla 3 nivel 2
+
+(define (dinosaurio_Grr_p3-2 x y)
+  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+  (dino0 x y)
+  (chusoss3)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2_p3-2 x y)
+  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (chusoss3)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir_p3-2 x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (chusoss3)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir_p3-2 (+ x 10) (- y 10))))
+    (else (bajar_p3-2 x y))))
+
+(define (bajar_p3-2 x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (chusoss3)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar_p3-2 (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (chusoss3)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi_p3-2 x y c key)
+  (cond
+    ((>= x 1300) (movi_p1-3 100 200 0 (key-value (get-key-press ventana))))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr_p3-2 x y)
+                                                (movi_p3-2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2_p3-2 x y)
+                                                     (movi_p3-2 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr_p3-2 x y)
+                                                 (movi_p3-2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2_p3-2 x y)
+                                                      (movi_p3-2 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir_p3-2 x y)
+                        (movi_p3-2 (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 2.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi_p3-2 x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+
+(define (cargando3)
+  (begin
+    ((clear-viewport ventana2))
+    ((draw-pixmap ventana) "dinocarga3.bmp" (make-posn 0 0) "blue")
+    (copy-viewport ventana2 ventana)
+    (carga3 0)
+    )
+  )
+
+(define (carga3 x)
+  (cond
+    ((<= x 966) (begin
+                   ((draw-solid-rectangle ventana) (make-posn 200 400) x 15 "blue")
+                   (sleep 0.01)
+                   (carga3 (+ x 2))))
+    (else (begin
+            ((clear-viewport ventana))
+            ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+            (mounstruoss)
+            (dino 100 200)
+            (copy-viewport ventana2 ventana)
+            (movi_p1-3 100 200 0 (key-value (get-key-press ventana)))
+            )
+          )
+    )
+  )
+
+;pantalla 1 nivel 3
+
+(define (dinosaurio_Grr_p1-3 x y)
+  ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+  (dino0 x y)
+  (mounstruoss)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+(define (dinosaurio_Grr2_p1-3 x y)
+  ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+  (dino1 x y)
+  (mounstruoss)
+  (copy-viewport ventana2 ventana)
+  ((clear-viewport ventana2))
+  )
+
+
+(define (subir_p1-3 x y)
+  (cond
+    ((> y 80) (begin
+                ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+                (dino2 x y)
+                (mounstruoss)
+                (copy-viewport ventana2 ventana)
+                (sleep 0.01)
+                ((clear-viewport ventana2))
+                (subir_p1-3 (+ x 10) (- y 10))))
+    (else (bajar_p1-3 x y))))
+
+(define (bajar_p1-3 x y)
+  (cond
+    ((<= y 200) (begin
+                  ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+                  (dino2 x y)
+                  (mounstruoss)
+                  (copy-viewport ventana2 ventana)
+                  (sleep 0.01)
+                  ((clear-viewport ventana2))
+                  (bajar_p1-3 (+ x 10) (+ y 10))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+            (dino (- x 5) (- y 5))
+            (mounstruoss)
+            (copy-viewport ventana2 ventana)
+            ))))
+
+(define (movi_p1-3 x y c key)
+  (cond
+    ((>= x 1300) (final))
+    ((equal? key 'left) (cond
+                          ((= (modulo c 2) 0) (begin
+                                                (dinosaurio_Grr_p1-3 x y)
+                                                (movi_p1-3 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                          ((not(= (modulo c 2) 0)) (begin
+                                                     (dinosaurio_Grr2_p1-3 x y)
+                                                     (movi_p1-3 (- x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'right) (cond
+                           ((= (modulo c 2) 0) (begin
+                                                 (dinosaurio_Grr_p1-3 x y)
+                                                 (movi_p1-3 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))
+                           ((not(= (modulo c 2) 0)) (begin
+                                                      (dinosaurio_Grr2_p1-3 x y)
+                                                      (movi_p1-3 (+ x 20) y (+ c 1) (key-value (get-key-press ventana)))))))
+    ((equal? key 'up) (begin
+                        (subir_p1-3 x y)
+                        (movi_p1-3 (+ x 260) y c (key-value (get-key-press ventana)))))
+    (else (begin
+            ((draw-pixmap ventana2)"mundo 3.JPG"(make-posn 0 -20)"blue")
+            (dino x y)
+            (movi_p1-3 x y c (key-value (get-key-press ventana)))))
+    )
+  )
+
+
+(define (ValiClick f)  
+  (if (and (and (<= (posn-x (mouse-click-posn f)) 900) (<= (posn-y (mouse-click-posn f)) 500)) (and (>= (posn-x (mouse-click-posn f)) 500) (>= (posn-y (mouse-click-posn f)) 250)))
+    (begin
+      (close-viewport ventana)
+  
+    )
+   
+    )
+  )
+
+(define (Click)
+  (define f (get-mouse-click ventana))
+  (ValiClick f)
+  )
+
+(define (final)
+  ((draw-pixmap ventana) "final.bmp" (make-posn 400 100) "blue")
+  (Click)
+  ) 
+
+(define (ValidarClick c)  
+  (if (and (and (<= (posn-x (mouse-click-posn c)) 200) (<= (posn-y (mouse-click-posn c)) 530)) (and (>= (posn-x (mouse-click-posn c)) 100) (>= (posn-y (mouse-click-posn c)) 500)))
+    (begin
+      (carga1 0)
+      (EsperarClick)
+  
+    )
+   
+    )
+  )
+
+(define (EsperarClick)
+  (define c (get-mouse-click ventana))
+  (ValidarClick c)
+  )
+
+(define (MostrarNuevaVentana)
+  ((draw-pixmap ventana) "dinosaurio.bmp" (make-posn 0 0) "blue") 
+  ((draw-rectangle ventana) (make-posn 100 500) 100 30 "blue")
+  ((draw-string ventana) (make-posn 118 520) "iniciar juego")
+  (EsperarClick)
+  ) 
+
+(MostrarNuevaVentana)

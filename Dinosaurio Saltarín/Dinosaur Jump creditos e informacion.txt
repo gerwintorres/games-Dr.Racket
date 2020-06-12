@@ -1,0 +1,7 @@
+Informacion:
+Dinosaur Jump
+El dinosaurio se maneja con las flechas, salta para evitar los obstaculos y llega al fin del juego.
+Juan Fernando Vargas Vargas
+Juan Pablo Londoño            
+Universidad Tecnologica de Pereira
+2020
