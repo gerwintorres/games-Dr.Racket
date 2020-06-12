@@ -1,0 +1,6 @@
+Cómo se juega:
+1. Se juega en 6 casillas que se controlan con las teclas A,S,D,J,K,L.
+2. Dependiendo en qué casilla aparezca la nota se tendrá que presionar una de las 6 teclas.
+3. Por cada nota acertada se suman 10 puntos al puntaje total
+4. Las notas azules son las notas más lentas, las grises tienen velocidad media y las rojas son las más rápidas
+5. Al finalizar el nivel se cierra la ventana para poder visualizar el puntaje final
