@@ -1,0 +1,14 @@
+<------ Juego Between Pixels ------>
+
+<------ Creadores ------>
+
+- Gerwin Lambraño torres
+- Daniel Alejandro Lizarazo Estrada
+
+
+Hecho en DrRacket.
+Todas las imagenes fueron descargadas de google y modificadas en editor de fotos.
+
+
+<------ Universidad Tecnologica de Pereira ------>
+<------ Ingenieria de sistemas y computacion ------>
