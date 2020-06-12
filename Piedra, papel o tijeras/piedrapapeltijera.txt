@@ -1,0 +1,4 @@
+es un piedra papel tijera con 3 opciones de juego, (jugador vs jugador), (jugador vs maquina) y (3 jugadores)
+funciona solo con mouse tiene definidos los 3 modos de juego cada uno en una pantalla diferente, y cada pantalla con su propia
+funcion para definir el ganador. 
+Las imagenes utilizadas en las pantallas son ellas en power point 
