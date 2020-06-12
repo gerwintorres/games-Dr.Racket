@@ -1,0 +1,6 @@
+Este programa consiste en que un caballo de ajedrez debe recorrer un tablero de ajedrez de tamaño 5x5 sin repetir casillas, en caso tal que se quede sin movimientos posibles el caballo comenzará de nuevo, el caballo puede iniciar desde cualquier posicion las instrucciones para esto esta comentada en el código
+
+Realizado por: Juan Pablo Cataño O.
+Oscar Julian Ortega 
+
+Correo: juan.catano1@utp.edu.co

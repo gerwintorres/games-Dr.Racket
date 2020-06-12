@@ -1,0 +1,302 @@
+#lang racket
+;Algoritmo del recorrido de un caballo de ajedrez en tablero de 5x5
+;Universidad Tecnológica de Pereira
+;Realizado por: Juan Pablo Cataño Osorio y Oscar Julian Ortega
+
+(require (lib "graphics.ss" "graphics"))
+(open-graphics)
+;se define la primer ventana en ser visualizada y se muestra la imagen de inicio
+(define ventana-principal(open-viewport "Principal" 1000 600))
+(((draw-pixmap-posn "inicio.png" 'unknown/mask) ventana-principal) (make-posn 0 0))
+
+(define (nclick);funcion para validar el click
+  (define click (get-mouse-click ventana-principal))
+  (inicio click)
+  )
+
+(define (inicio c);cuando se da click en inicio se muestra la imagen de explicacion y comienza a correr el programa
+  (if (and (and (>= (posn-x (mouse-click-posn c)) 377) (>= (posn-y (mouse-click-posn c)) 365)) (and (<= (posn-x (mouse-click-posn c)) 627) (<= (posn-y (mouse-click-posn c)) 452)))
+      (begin
+        (((draw-pixmap-posn "explicacion.png" 'unknown/mask) ventana-principal) (make-posn 0 0))
+        (sleep 0.1)
+        (close-viewport ventana-principal)
+        )
+      (begin
+        (nclick))))
+
+(inicio (get-mouse-click ventana-principal));llamado a la funcion que espera el click de inicio
+
+(define ventana1(open-viewport "Caballo" 800 600))
+
+;_____________________________________________
+;titulos en el recorrido
+((draw-viewport ventana1) "whitesmoke")
+((draw-string ventana1) (make-posn 200 15) "Recorrido del caballo por fuerza bruta" "black")
+((draw-string ventana1) (make-posn 50 100) "Caballo listo para el recorrido: ")
+(((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn 100 110))
+;_____________________________________________
+
+(define (tablero x y);dibujo del tablero de ajedrez
+  ((draw-solid-rectangle ventana1) (make-posn 295 95) (+ 10 (* x 5)) (+ 10 (* y 5)) "black")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 0)) 100) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 1)) 100) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 2)) 100) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 3)) 100) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 4)) 100) x y "beige")
+
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 0)) (+ 100 (* y 1))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 1)) (+ 100 (* y 1))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 2)) (+ 100 (* y 1))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 3)) (+ 100 (* y 1))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 4)) (+ 100 (* y 1))) x y "brown")
+
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 0)) (+ 100 (* y 2))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 1)) (+ 100 (* y 2))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 2)) (+ 100 (* y 2))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 3)) (+ 100 (* y 2))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 4)) (+ 100 (* y 2))) x y "beige")
+
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 0)) (+ 100 (* y 3))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 1)) (+ 100 (* y 3))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 2)) (+ 100 (* y 3))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 3)) (+ 100 (* y 3))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 4)) (+ 100 (* y 3))) x y "brown")
+
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 0)) (+ 100 (* y 4))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 1)) (+ 100 (* y 4))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 2)) (+ 100 (* y 4))) x y "beige")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 3)) (+ 100 (* y 4))) x y "brown")
+  ((draw-solid-rectangle ventana1) (make-posn (+ 300 (* x 4)) (+ 100 (* y 4))) x y "beige")
+  
+  )
+
+(tablero 90 90);llamado al tablaro para que se dibuje
+
+;_________________
+;limites del tablero
+(define posn1x 300)
+(define posn2x 750)
+(define posn1y 100)
+(define posn2y 550)
+;320 110
+;__________________
+
+;posicion inicial del caballo
+(define x 320)
+(define y 110)
+
+
+
+(define (caballo x y)
+  (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn x y))
+  )
+
+(caballo x y)
+
+;------------------------Movimientos del caballo----------------------------------------
+(define (mov1caballo x y posnx posny)
+  (if (< (+ x 90) posnx)
+      (if (> (- y 180) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (+ x 90) (- y 180)))
+            (escoger-movimiento (+ (random 8) 1) (+ x 90) (- y 180) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov1caballo x y posn2x posn1y)
+
+
+(define (mov2caballo x y posnx posny)
+  (if (< (+ x 180) posnx)
+      (if (> (- y 90) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (+ x 180) (- y 90)))
+            (escoger-movimiento (+ (random 8) 1) (+ x 180) (- y 90) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov2caballo x y posn2x posn1y)
+
+
+(define (mov3caballo x y posnx posny)
+  (if (< (+ x 180) posnx)
+      (if (< (+ y 90) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (+ x 180) (+ y 90)))
+            (escoger-movimiento (+ (random 8) 1) (+ x 180) (+ y 90) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov3caballo x y posn2x posn2y)
+
+
+(define (mov4caballo x y posnx posny)
+  (if (< (+ x 90) posnx)
+      (if (< (+ y 180) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (+ x 90) (+ y 180)))
+            (escoger-movimiento (+ (random 8) 1) (+ x 90) (+ y 180) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov4caballo x y posn2x posn2y)
+
+
+(define (mov5caballo x y posnx posny)
+  (if (> (- x 90) posnx)
+      (if (< (+ y 180) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (- x 90) (+ y 180)))
+            (escoger-movimiento (+ (random 8) 1) (- x 90) (+ y 180) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov5caballo x y posn1x posn2y)
+
+
+(define (mov6caballo x y posnx posny)
+  (if (> (- x 180) posnx)
+      (if (< (+ y 90) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (- x 180) (+ y 90)))
+            (escoger-movimiento (+ (random 8) 1) (- x 180) (+ y 90) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov6caballo x y posn1x posn2y)
+
+
+(define (mov7caballo x y posnx posny)
+  (if (> (- x 180) posnx)
+      (if (> (- y 90) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (- x 180) (- y 90)))
+            (escoger-movimiento (+ (random 8) 1) (- x 180) (- y 90) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov7caballo x y posn1x posn1y)
+
+
+(define (mov8caballo x y posnx posny)
+  (if (> (- x 90) posnx)
+      (if (> (- y 180) posny)
+          (begin
+            (sleep 2)
+            (((draw-pixmap-posn "xa.png" 'unknown/mask) ventana1) (make-posn (- x 15) (- y 5)))
+            (((draw-pixmap-posn "caballo3.png" 'unknown/mask) ventana1) (make-posn (- x 90) (- y 180)))
+            (escoger-movimiento (+ (random 8) 1) (- x 90) (- y 180) posn1x posn1y posn2x posn2y)
+          )
+          (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y))
+      (escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)))
+
+;(mov8caballo x y posn1x posn1y)
+
+;matematicamente los movimientos del caballo son: (x,y)<-- posicion inicial
+;los movimientos del caballo expresados por unidades a continuación
+;tienen un valor en el codigo de 90 pixeles cuando, es decir: (x+90,y-180) para el primer caso
+;movimiento 1 (x+1,y-2) 
+;movimiento 2 (x+2,y-1)
+;movimiento 3 (x+2,y+1)
+;movimiento 4 (x+1,y+2)
+;movimiento 5 (x-1,y+2)
+;movimiento 6 (x-2,y+1)
+;movimiento 7 (x-2,y-1)
+;movimiento 8 (x-1,y-2)
+;_______________________________________________________________________________<-separador
+
+;conjunto de funciones que permiten verificar que el caballo no repita casillas
+(define-struct posiciones (x y))
+
+(define vector-movimientos (make-vector 25 0))
+
+
+;--------------------------------------------------------------------------------------------------
+;funciones para saber si es posible reazlizar un movimiento
+(define (mov1? x y posnx posny)
+  (if (and (< (+ x 90) posnx) (> (- y 180) posny))
+      #t
+      #f))
+
+(define (mov2? x y posnx posny)
+  (if (and (< (+ x 180) posnx) (> (- y 90) posny))
+      #t
+      #f))
+
+(define (mov3? x y posnx posny)
+  (if (and (< (+ x 180) posnx) (< (+ y 90) posny))
+      #t
+      #f))
+
+(define (mov4? x y posnx posny)
+  (if (and (< (+ x 90) posnx) (< (+ y 180) posny))
+      #t
+      #f))
+
+(define (mov5? x y posnx posny)
+  (if (and (> (- x 90) posnx) (< (+ y 180) posny))
+      #t
+      #f))
+
+(define (mov6? x y posnx posny)
+  (if (and (> (- x 180) posnx) (< (+ y 90) posny))
+      #t
+      #f))
+
+(define (mov7? x y posnx posny)
+  (if (and (> (- x 180) posnx) (> (- y 90) posny))
+      #t
+      #f))
+
+(define (mov8? x y posnx posny)
+  (if (and (> (- x 90) posnx) (> (- y 180) posny))
+      #t
+      #f))
+;--------------------------------------------------------------------------------------------------
+
+;Base de la funcion del movimiento
+;(define (escoger-movimiento n x y posn1x posn1y posn2x posn2y)
+;  (cond ((= n 1) (mov1caballo x y posn2x posn1y))
+;        ((= n 2) (mov2caballo x y posn2x posn1y))
+;        ((= n 3) (mov3caballo x y posn2x posn2y))
+;        ((= n 4) (mov4caballo x y posn2x posn2y))
+;        ((= n 5) (mov5caballo x y posn1x posn2y))
+;        ((= n 6) (mov6caballo x y posn1x posn2y))
+;        ((= n 7) (mov7caballo x y posn1x posn1y))
+;        ((= n 8) (mov8caballo x y posn1x posn1y))))
+
+;funcion que escoge aleatoriamente una posicion para mover el caballo
+(define (escoger-movimiento n x y posn1x posn1y posn2x posn2y)
+  (cond ((= n 1) (mov1caballo x y posn2x posn1y))
+        ((= n 2) (mov2caballo x y posn2x posn1y))
+        ((= n 3) (mov3caballo x y posn2x posn2y))
+        ((= n 4) (mov4caballo x y posn2x posn2y))
+        ((= n 5) (mov5caballo x y posn1x posn2y))
+        ((= n 6) (mov6caballo x y posn1x posn2y))
+        ((= n 7) (mov7caballo x y posn1x posn1y))
+        ((= n 8) (mov8caballo x y posn1x posn1y))))
+
+
+(escoger-movimiento (+ (random 8) 1) x y posn1x posn1y posn2x posn2y)
+;--------------------------------------------------------------------------------------
