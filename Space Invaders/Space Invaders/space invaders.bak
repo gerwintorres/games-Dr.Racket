@@ -1,0 +1,159 @@
+(require 2htdp/universe)
+(require 2htdp/image)
+(require (lib "graphics.ss" "graphics"))
+(open-graphics)
+
+(define ventana (open-viewport "Teclado" 600 600))
+(define ventana1 (open-pixmap "ventana1" 600 600))
+
+;Inicio
+(define (inicio)
+  (begin
+    (define iniciop(open-viewport "Inicio de juego" 600 600))
+    ((draw-pixmap iniciop) "C:/Users/Personal/Desktop/proyecto final/Inicio.png" (make-posn 0.0 0.0))
+    (get-mouse-click iniciop)
+    (define x (posn-x (query-mouse-posn iniciop)))
+    (define y (posn-y (query-mouse-posn iniciop)))
+    (if (and (>= x 0) (<= x 955) (>= y 0) (<= y 900))
+        (begin
+          (close-viewport iniciop)
+          (menu)
+          )
+        )
+    )
+  )
+
+;Menu
+(define (menu)
+  (begin
+    (define menup (open-viewport "menu de juego" 600 600))
+    ((draw-pixmap menup) "C:/Users/Personal/Desktop/proyecto final/menu.bmp" (make-posn 0.0 0.0))
+    (get-mouse-click menup)
+    (define x (posn-x (query-mouse-posn menup)))
+    (define y (posn-y (query-mouse-posn menup)))
+    (if (and (>= x 0) (<= x 955) (>= y 0) (<= y 900))
+        (begin
+          (close-viewport menup)
+          )
+        )
+    )
+  )
+
+
+;Dibujo en la pantalla
+(define (nave posx posy tecla)
+  (if(equal? tecla  'arriba)
+     (begin
+       ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/fondo.jpg" (make-posn 0 0))
+       ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/nave1.png"(make-posn posx posy))
+       )
+     
+     (if(equal? tecla  'abajo)
+        (begin
+          ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/fondo.jpg" (make-posn 0 0))
+          ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/nave1.png"(make-posn posx posy))
+          )
+
+        
+        (if(equal? tecla  'izquierda)
+           (begin
+             ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/fondo.jpg" (make-posn 0 0))
+             ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/nave1.png"(make-posn posx posy))
+
+             )
+           (if(equal? tecla  'derecha)
+              (begin
+                ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/fondo.jpg" (make-posn 0 0))
+                ((draw-pixmap ventana1) "C:/Users/Personal/Desktop/proyecto final/nave1.png"(make-posn posx posy))
+
+                )
+              (void)
+              )
+           )
+        )
+     )
+  (copy-viewport ventana1 ventana)
+  ((clear-viewport ventana1))
+  
+  )
+
+;Eventos
+
+(define (teclado posx posy tecla)
+  (if (< posx 50)
+      (begin
+        (nave 50 posy 'izquierda)
+        (teclado 50 posy (key-value (get-key-press ventana)))
+        )
+      (if (> posx 500)
+          (begin
+            (nave 500 posy 'izquierda)
+            (teclado 500 posy (key-value (get-key-press ventana)))
+            )
+          (if(equal? tecla 'left)
+             (begin
+               (nave (- posx 20) posy 'izquierda)
+               (teclado (- posx 20) posy  (key-value(get-key-press ventana)))
+               )
+
+             (if(equal? tecla 'right)
+                (begin
+                  (nave (+ posx 20) posy 'derecha)
+                  (teclado (+ posx 20) posy  (key-value(get-key-press ventana)))
+                  )
+
+                (teclado posx posy  (key-value(get-key-press ventana)))
+
+                )
+             )
+          )
+      )
+  )
+(inicio)
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,13 @@
+Juego de naves espaciales inspirado en galaga o tambien conocido como space invaders
+
+Objetivo del juego: Destruir las naves enemigas (en forma de triangulo) y durar el mayor tiempo posible, 
+3 modos de dificultad y 3 niveles diferentes, con naves diferentes en cada nivel.
+
+Creador del archivo: Emanuel Gil Restrepo
+Universidad tecnologica de pereira
+
+Recomendaciones: no sacar el archivo .rkt de la carpeta.
+
+Librerias usadas: (graphics.ss)
+                  (2htdp/universe)
+	          (2htdp/image)
