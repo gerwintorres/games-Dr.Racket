@@ -1,2 +1,2 @@
-# Juegos-programados-en-Dr.Racket-Scheme
+#games - Dr.Scheme
 Los juegos que están en este repositorio fueron programados por estudiantes de la Universidad Tecnológica de Pereira - 2020|1. Este repositorio fue creado con el proposito de que cada uno de los códigos que están en él sirvan como base de estudio para futuras generaciones de la UTP y de la comunidad en general. Por favor lea las notas de texto que están en cada una de las carpetas.
